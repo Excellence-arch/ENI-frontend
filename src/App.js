@@ -14,7 +14,11 @@ const App = () => {
     setLoading(true)
     axios.post(url, {name, email}).then(res => {
       setLoading(false);
-      setSuccess("Registration Successful")
+      if(res.status === 201) {
+        setSuccess("Registration Successful");
+      } else {
+        setError(res.message);
+      }
     }).catch((err) => {
       setLoading(false)
       setError(err.message);
