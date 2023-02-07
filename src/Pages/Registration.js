@@ -13,7 +13,9 @@ const Registration = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    setLoading(true)
+    setError(false);
+    setSuccess(false);
+    setLoading(true);
     axios.post(url, {name, email}).then(res => {
       setLoading(false);
       if(res.status === 201) {
