@@ -17,9 +17,9 @@ const Admin = () => {
     <div>
         <div className='container'>
             <div className='row'>
-                <div className='container text-center'>
-                    <table>
-                        <thead>
+                <div className='container text-center mt-3'>
+                    <table className='table table-bordered'>
+                        <thead className='thead'>
                             <tr>
                                 <td>S/N</td>
                                 <td>ID</td>
